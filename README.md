@@ -17,4 +17,5 @@ Apex Corp. Bank is a fictional banking website designed as an project to showcas
 - **Bootstrap 4**: For responsive design and UI components.
 - **JavaScript**: For carousel functionality.
 
- **link** - apex-bank.free.nf
+ **link** - (https://gradual-peck.000webhostapp.com/index.php)
+ **link2** - (apex-bank.free.nf)
