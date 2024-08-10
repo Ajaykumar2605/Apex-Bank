@@ -18,4 +18,4 @@ Apex Corp. Bank is a fictional banking website designed as an project to showcas
 - **JavaScript**: For carousel functionality.
 
  **link** - (https://gradual-peck.000webhostapp.com/index.php)
- **link2** - (apex-bank.free.nf)
+- **link2** - (apex-bank.free.nf)
