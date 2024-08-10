@@ -1,0 +1,17 @@
+#body
+{
+background-color: rgb(177, 224, 224);
+}
+.text-center mt-2 py-5
+{
+  height: 30px;
+  width: 100%;
+  background-color: rgb(34, 20, 116);
+  color: antiquewhite
+}
+#demo
+{
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+}
