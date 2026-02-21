@@ -36,8 +36,8 @@
   </div>
 </nav>
 <?php
-            $connection = mysqli_connect("127.0.0.1","apex_user","StrongPassword123!","apexbank_db");
-$db = mysqli_select_db($connection,"apexbank_db");
+            $connection = mysqli_connect("192.168.1.20","apex_user","redhat","apexbank_db");
+$db = mysqli_select_db($connection,"apexbank_db")
             
              $sql = "select * from Account";
              $run = mysqli_query($connection, $sql);
@@ -239,3 +239,4 @@ $db = mysqli_select_db($connection,"apexbank_db");
 </body>
 
 </html>
+
