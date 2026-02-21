@@ -1,6 +1,6 @@
 <?php
-   $connection = mysqli_connect("sql104.infinityfree.com","if0_37077474","Apex2024");
-   $db = mysqli_select_db($connection,"if0_37077474_banking_db");
+  $connection = mysqli_connect("192.168.1.20","apex_user","redhat","apexbank_db");
+$db = mysqli_select_db($connection,"apexbank_db");
 
     if(isset($_POST['submit']))
         { 
@@ -107,4 +107,5 @@
   
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
 </body>
+
 </html>
