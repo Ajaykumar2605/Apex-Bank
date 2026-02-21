@@ -1,6 +1,6 @@
 <?php
-$connection = mysqli_connect("sql104.infinityfree.com","if0_37077474","Apex2024");
-$db = mysqli_select_db($connection,"if0_37077474_banking_db");
+$connection = mysqli_connect("192.168.1.20","apex_user","redhat","apexbank_db");
+$db = mysqli_select_db($connection,"apexbank_db")
 $delete = $_GET['del'];
 
 
@@ -17,5 +17,6 @@ if(mysqli_query($connection,$sql))
            echo "Some thing Error" . $connection->error;
 
            }
+
 
 ?>
