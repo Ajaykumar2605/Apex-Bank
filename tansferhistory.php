@@ -52,8 +52,8 @@
         <tbody>
         <?php
 
-$connection = mysqli_connect("sql104.infinityfree.com","if0_37077474","Apex2024");
-$db = mysqli_select_db($connection,"if0_37077474_banking_db");
+$connection = mysqli_connect("127.0.0.1","apex_user","StrongPassword123!","apexbank_db");
+$db = mysqli_select_db($connection,"apexbank_db");
             $sql ="select * from transaction";
 
             $run =mysqli_query($connection, $sql);
@@ -86,3 +86,4 @@ $db = mysqli_select_db($connection,"if0_37077474_banking_db");
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
 </body>
 </html>
+
