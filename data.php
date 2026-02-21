@@ -53,34 +53,41 @@
                             </tr>
                         </thead>
                         <tbody>
-                                <?php
-                               $connection = mysqli_connect("192.168.1.20","apex_user","redhat","apexbank_db");
-                               $db = mysqli_select_db($connection,"apexbank_db")
+<?php
+$connection = mysqli_connect("192.168.1.20", "apex_user", "redhat", "apexbank_db");
 
-                                $sql = "select * from Account";
-                                $run = mysqli_query($connection, $sql);
+if (!$connection) {
+    die("Database connection failed: " . mysqli_connect_error());
+}
 
-                                while($row = mysqli_fetch_array($run))
-                                {
-                                    $accno = $row['accno'];
-                                    $name = $row['name'];
-                                    $mail = $row['mail'];
-                                    $amt = $row['amt'];
-                                ?>
+$sql = "SELECT * FROM account";
+$run = mysqli_query($connection, $sql);
 
-                                   <tr>
-                                        <td><?php echo $accno ?></td>
-                                        <td><?php echo $name ?></td>
-                                        <td><?php echo $mail ?></td>
-                                        <td><?php echo $amt ?></td>
+if (!$run) {
+    die("Query failed: " . mysqli_error($connection));
+}
 
-                                        <td>
-                                       <button class="btn btn-danger"><a href='delete.php?del=<?php echo $accno ?>' class="text-light"> Delete </a> </button>
-                                       <button class="btn btn-success"><a href='transfer.php?tf=<?php echo $accno ?>' class="text-light"> transfer </a> </button>    
-                                    </td>
-                                   </tr>
-                                    <?php $accno++; } ?>
-                        </tbody>
+while($row = mysqli_fetch_assoc($run)) {
+    $accno = $row['accno'];
+    $name  = $row['name'];
+    $mail  = $row['mail'];
+    $amt   = $row['amt'];
+?>
+<tr>
+    <td><?php echo $accno; ?></td>
+    <td><?php echo $name; ?></td>
+    <td><?php echo $mail; ?></td>
+    <td><?php echo $amt; ?></td>
+    <td>
+        <button class="btn btn-danger">
+            <a href='delete.php?del=<?php echo $accno ?>' class="text-light">Delete</a>
+        </button>
+        <button class="btn btn-success">
+            <a href='transfer.php?tf=<?php echo $accno ?>' class="text-light">Transfer</a>
+        </button>
+    </td>
+</tr>
+<?php } ?>                        </tbody>
                         </table>
                     </div>
                     </div>
